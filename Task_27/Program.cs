@@ -2,17 +2,28 @@
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
-Console.WriteLine("Введите число: ");
-int num =int.Parse(Console.ReadLine());
 int sum = 0;
-int i=0;
 
-while (i < num.Length)
-	{
-		Console.WriteLine($"{num} -> {sum+i}");
-		i++;
-	}
-// for (int i = 0; i<=num.Length; i++)
-// {
-//     Console.WriteLine($"{num} -> {sum+i}");
-// }
+Console.WriteLine("Введите размер массива");
+int size = int.Parse(Console.ReadLine());
+int[] arr = new int[size];
+
+
+Console.WriteLine("Введите число, равное вашему массивному размеру");
+string s = Console.ReadLine();
+
+
+for (int i = 0; i < s.Length; i++)
+{
+	arr[i] = int.Parse(s[i].ToString());
+}
+
+for (int i = 0; i < arr.Length; i++)
+{
+	sum = arr[i] + sum;
+}
+
+
+
+Console.WriteLine(sum);
+Console.ReadLine();
