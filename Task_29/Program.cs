@@ -19,7 +19,7 @@ void Array(int[] arr)
 {
 	for (int i = 0; i < arr.Length; i++)
 	{
-		arr[i] = rand.Next(0, 8);
+		arr[i] = rand.Next(0, 100);
 	}
 }
 
@@ -34,3 +34,4 @@ void Print(int[] arr)
 }
 Array(array);
 Print(array);
+// КАК УБАРАТЬ ЭТУ ТУПУЮ ЗАПЯТУЮ!!! я что толко не смотрел (
