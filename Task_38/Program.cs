@@ -8,7 +8,7 @@ double[] RanArray(int size)
 	Random rnd = new Random();
 	for (int i = 0; i < arr.Length; i++)
 	{
-		arr[i] = rnd.Next(1, 20);
+		arr[i] = rnd.Next(1, 100);
 	}
 	return arr;
 }
@@ -23,7 +23,7 @@ void PrintArray(double[] arr)
 	}
 }
 
-double MaxMin(double[] arr)
+double SelectMaxMin(double[] arr)
 {
 	double max = arr[0];
 	double min = arr[0];
@@ -36,6 +36,6 @@ double MaxMin(double[] arr)
 }
 
 double[] array = RanArray(10);
-double result = MaxMin(array);
+double result = SelectMaxMin(array);
 PrintArray(array);
 Console.Write( $" -> {result}");
