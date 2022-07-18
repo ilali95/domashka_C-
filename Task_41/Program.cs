@@ -3,6 +3,7 @@
 // -1, -7, 567, 89, 223-> 3
 
 Console.WriteLine("Введите числа, через запятую: ");
+// int[] data = Console.ReadLine().Split().Select(int.Parse).ToArray();
 string[] numbers = Console.ReadLine().Split(',');
 
 int NumbersAboveZero(string[] array)
