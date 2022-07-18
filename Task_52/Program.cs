@@ -47,23 +47,36 @@ void PrintMatrix(int[,] arr)
 	}
 }
 
-double ResultColumn(int[,] arr)
+double[] ResultColumn(int[,] arr)
 {
-	double result = 0;
+	double sum = 0;
 	double num = 0;
+	double[] result = new double[arr.GetLength(1)];
+
 	for (int j = 0; j < arr.GetLength(1); j++)
 	{
 		for (int i = 0; i < arr.GetLength(0); i++)
 		{
-			result += arr[i, j];
+			sum += arr[i, j];
 			num++;
 		}
-		result = Math.Round(result / num, 2);
+		result[j] = Math.Round(sum / num, 2);
 	}
 	return result;
 }
 
+void PrintResult(double[] array)
+{
+	for (int i = 0; i < array.Length; i++)
+	{
+		if (i == 0) Console.Write("Среднее арифметическое каждого столбца: ");
+		if (i < array.Length - 1) Console.Write(array[i] + ",");
+		else Console.Write(array[i] + ".");
+	}
+}
+
 int[,] arrayResult = CreateMatrixRndDouble(number, num, min, max);
-double result = ResultColumn(arrayResult);
+double[] result = ResultColumn(arrayResult);
 PrintMatrix(arrayResult);
-Console.WriteLine($"Среднее арифметическое каждого столбца: {result}");
+PrintResult(result);
+// Console.WriteLine($"Среднее арифметическое каждого столбца: {result}");
