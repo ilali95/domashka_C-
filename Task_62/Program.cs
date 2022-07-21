@@ -5,8 +5,46 @@
 // 11 16 15 06
 // 10 09 08 07
 
+Console.Clear();
+Console.WriteLine("Введите размер двухмерного массива через пробел ");
+int[] size = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
+
 int[,] FillArray(int[] arr)
-{}
+{
+	int[,] array = new int[arr[0], arr[1]];
+	for (int i = 0; i < array.GetLength(0); i++)
+	{
+		if (i < array.GetLength(0))
+		{
+			array[0, i] = i + 1;
+		}
+		for (int j = 0; j < array.GetLength(1); j++)
+		{
+			array[j, i] = i + j;
+		}
+	}
+	// int[,] array = new int[arr[0], arr[1]];
+	// int iStep = 0;
+	// int num = 1;
+	// int i = 0;
+	// int j = 0;
+	// while (num <= array.GetLength(0) * array.GetLength(1))
+	// {
+	// 	array[i, j] = num;
+	// 	if (i == iStep && j < array.GetLength(1) - iStep - 1) j++;
+	// 	else if (j == array.GetLength(1) - iStep - 1 && i < array.GetLength(0) - iStep - 1) i++;
+	// 	else if (i == array.GetLength(0) - iStep - 1 && j > iStep) j--;
+	// 	else i--;
+
+	// 	if (i == iStep + 1 && j == iStep && iStep != array.GetLength(1) - iStep - 1)
+	// 	{
+	// 		iStep++;
+
+	// 	}
+	// 	num++;
+	// }
+	return array;
+}
 
 void PrintMatrix(int[,] arr)
 {
@@ -22,5 +60,5 @@ void PrintMatrix(int[,] arr)
 	}
 }
 
-int[,] array = FillArray(size);
-PrintMatrix(array);
+int[,] arrayResult = FillArray(size);
+PrintMatrix(arrayResult);
