@@ -18,8 +18,13 @@ int[,,] CreateMatrixRndInt(int m, int n, int z)
 		{
 			for (int k = 0; k < arr.GetLength(2); k++)
 			{
-				arr[i, j, k] = rnd.Next(10, 100);
 				
+				arr[i, j, k] = rnd.Next(10, 100);
+				int num = arr[i, j, k];
+				if( )
+
+
+
 			}
 		}
 	}

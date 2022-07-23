@@ -12,15 +12,18 @@ int[] size = Console.ReadLine()!.Split().Select(int.Parse).ToArray();
 int[,] FillArray(int[] arr)
 {
 	int[,] array = new int[arr[0], arr[1]];
+
 	for (int i = 0; i < array.GetLength(0); i++)
 	{
-		if (i < array.GetLength(0))
-		{
-			array[0, i] = i + 1;
-		}
+
 		for (int j = 0; j < array.GetLength(1); j++)
 		{
-			array[j, i] = i + j;
+			if (i < array.GetLength(0)) array[j, i] = i + 1;
+			if (i == array.GetLength(0))
+			{
+			j = array.GetLength(0); 
+			array[j, i] = i;
+			}
 		}
 	}
 	// int[,] array = new int[arr[0], arr[1]];
