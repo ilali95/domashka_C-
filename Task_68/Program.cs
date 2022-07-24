@@ -13,8 +13,7 @@ AckermannFunc(num, num1);
 int AckermannFunc(int m, int n)
 {
 
-	if (m == 0)
-		return n + 1;
+	if (m == 0) return n + 1;
 	if (m > 0)
 		if (n == 0)
 			return AckermannFunc(m - 1, 1);
