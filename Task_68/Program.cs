@@ -12,8 +12,7 @@ AckermannFunc(num, num1);
 
 int AckermannFunc(int m, int n)
 {
-int Depth = 0;
-	Depth++;
+
 	if (m == 0)
 		return n + 1;
 	if (m > 0)
