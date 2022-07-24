@@ -14,8 +14,8 @@ NumSum(num, num1);
 int NumSum(int n, int n1)
 {
 	return n == n1 ? n : n + NumSum(n + 1, n1);
-// 	if (n == n1) return n;
-// 	return n + NumSum(n + 1, n1);
+	// 	if (n == n1) return n;
+	// 	return n + NumSum(n + 1, n1);
 }
 
 
